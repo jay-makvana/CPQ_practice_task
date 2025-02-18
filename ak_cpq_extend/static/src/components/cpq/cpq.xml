@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="ak_cpq_extend.CPQProductSessionData">
+        <div>
+            <div>
+                <center>
+                    <h1>Session Data</h1>
+                </center>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Product</th>
+                            <th>Customer</th>
+                            <th>Status</th>
+                            <th>Price Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       <t t-foreach="this.data" t-as="data" t-key="data.id">
+                            <tr>
+                                <td t-out="data.name"/>
+                                <td t-out="data.product_id[1]"/>
+                                <td t-out="data.partner_id[1]"/>
+                                <td t-out="data.state"/>
+                                <td t-out="data.price_total"/>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </t>
+</templates>
