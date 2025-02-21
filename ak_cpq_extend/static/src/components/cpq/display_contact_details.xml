@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="ak_cpq_extend.display_contact_details">
+        <t t-set="css_style">
+            <![CDATA[
+                .partner-name-widget {
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 10px;
+                }
+                .partner-name-widget span {
+                    font-size: 14px;
+                }
+                .partner_info {
+                    background: #f8f9fa;
+                    padding: 10px;
+                    border-radius: 5px;
+                    border: 1px solid #ddd;
+                }
+                .partner_info p {
+                    margin: 5px 0;
+                    font-size: 14px;
+                }
+                .partner_info strong {
+                    color: #333;
+                    margin-right: 10px
+                }
+            ]]>
+        </t>
+        <style t-out="css_style"/>
+
+        <div class="d-flex partner-name-widget">
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <span class="fw-light">Customer</span>
+            <span>
+                <Many2XAutocomplete
+                        value="state.selectedPartner || ''"
+                        resModel="'res.partner'"
+                        getDomain="getDomain"
+                        fieldString="'Customer'"
+                        activeActions="{}"
+                        update.bind="onUpdatePartner"
+                        autoSelect="true"
+                        quickCreate="null"
+                        autofocus="true"
+                />
+            </span>
+        </div>
+        <div>
+            <div class="partner_info">
+                <p style="margin-right: 20px;"><strong>Name :</strong>
+                    <t t-out="state.partner_name || ''"/>
+                </p>
+                <br/>
+                <p style="margin-right: 20px;"><strong>Email :</strong>
+                    <t t-out="state.partner_email || ''"/>
+                </p>
+                <br/>
+                <p style="margin-right: 20px;"><strong>Phone :</strong>
+                    <t t-out="state.partner_phone || ''"/>
+                </p>
+            </div>
+        </div>
+    </t>
+</templates>

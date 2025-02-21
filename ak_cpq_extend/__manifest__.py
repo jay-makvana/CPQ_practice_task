@@ -10,7 +10,7 @@
 
 {
     'name': 'Odoo CPQ - Custom Product Configurator Extend',
-    'version': '18.0.0.0.0',
+    'version': '18.0.1.0.0',
     'summary': 'Odoo CPQ - Custom Product Configurator Extend',
     'description': """
        Odoo CPQ - Custom Product Configurator Extend
