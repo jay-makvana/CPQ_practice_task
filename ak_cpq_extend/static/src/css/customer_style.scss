@@ -1,0 +1,102 @@
+/* Overall container for the update customer view */
+.update-customer-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    height: 100vh;
+}
+
+/* Styling for the customer list */
+.customer-list-container {
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+.customer-list-container h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.customer-item {
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.customer-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* Styling for the customer form */
+.customer-form {
+    width: 75%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.customer-info h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.customer-info form div {
+    margin-bottom: 15px;
+}
+
+.customer-info label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.customer-info input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.customer-info button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.customer-info button:hover {
+    background-color: #0056b3;
+}
+
+/* Scrollbar styling for customer list */
+.customer-list-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.customer-list-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.customer-list-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.customer-list-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

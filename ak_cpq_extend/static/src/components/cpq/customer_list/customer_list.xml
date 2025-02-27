@@ -1,0 +1,14 @@
+<templates xml:space="preserve">
+    <t t-name="ak_cpq_extend.customer_list">
+        <div class="customer-list-container">
+            <h3 style="text-align: center; margin-bottom: 15px;">Customer List</h3>
+            <ul>
+                <t t-foreach="state.customers" t-as="customer" t-key="customer.id">
+                    <li class="customer-item" t-on-click="() => props.onSelectCustomer(customer.id)">
+                        <strong t-esc="customer.name"/>
+                    </li>
+                </t>
+            </ul>
+        </div>
+    </t>
+</templates>

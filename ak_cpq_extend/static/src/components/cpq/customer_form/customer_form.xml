@@ -1,0 +1,32 @@
+<templates xml:space="preserve">
+    <t t-name="ak_cpq_extend.customer_form">
+        <div class="customer-info">
+            <h3 style="text-align: center; margin-bottom: 20px;">Customer Form</h3>
+            <form>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" t-model="state.name"/>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" t-model="state.email"/>
+                </div>
+                <div>
+                    <label for="mobile">Mobile:</label>
+                    <input type="tel" id="mobile" t-model="state.mobile"/>
+                </div>
+                <div>
+                    <label for="website">Website:</label>
+                    <input type="url" id="website" t-model="state.website"/>
+                </div>
+                <div>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" t-model="state.phone"/>
+                </div>
+                <div>
+                    <button t-on-click="onclickUpdateCustomer" type="button" class="btn btn-primary">Update</button>
+                </div>
+            </form>
+        </div>
+    </t>
+</templates>

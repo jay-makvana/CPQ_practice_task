@@ -15,3 +15,11 @@ class ProductTemplateInherit(models.Model):
                 "product_id": self.id,
             }
         }
+
+    def display_contact_details(self):
+        return {
+            "type": "ir.actions.client",
+            "target": "current",
+            "tag": "display_contact_details",
+            "context": {}
+        }

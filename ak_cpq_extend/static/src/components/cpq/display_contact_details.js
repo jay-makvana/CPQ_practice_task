@@ -9,15 +9,9 @@ import {_t} from "@web/core/l10n/translation";
 export class DisplayContactDetails extends Component {
     static template = "ak_cpq_extend.display_contact_details";
     static components = {Many2XAutocomplete}
-    static props = {
-        session: {optional: true},
-        block_session: {optional: true},
-        sessions: {optional: true},
-    };
 
     setup() {
         super.setup();
-        this.data = [];
         this.state = useState({
             selectedPartner: null,
             partner_name: '',
@@ -27,16 +21,13 @@ export class DisplayContactDetails extends Component {
 
         this.orm = useService("orm");
 
-        onWillStart(async () => {
-
-        });
     };
     getDomain() {
         return [['active', '=', true], ['type', '=', 'contact']];
     };
 
     async onUpdatePartner(ev) {
-        if (ev && ev.length > 0) {
+        if (ev) {
             let getRecord = await this.orm.read('res.partner', [ev[0].id]);
             this.state.selectedPartner = getRecord.length ? getRecord[0].display_name : null;
             this.state.partner_name = getRecord[0].name;

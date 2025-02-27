@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.actions.client" id="update_customer_action">
+        <field name="name">update_customer</field>
+        <field name="tag">ak_cpq_extend.UpdateCustomer</field>
+    </record>
+
+    <menuitem id="update_customer_menu" name="Update Customer"
+              parent="sale.sale_order_menu"
+              action="update_customer_action"
+              sequence="50"
+    />
+</odoo>

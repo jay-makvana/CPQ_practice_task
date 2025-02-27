@@ -10,20 +10,22 @@
 
 {
     'name': 'Odoo CPQ - Custom Product Configurator Extend',
-    'version': '18.0.1.0.0',
+    'version': '18.0.2.0.0',
     'summary': 'Odoo CPQ - Custom Product Configurator Extend',
     'description': """
        Odoo CPQ - Custom Product Configurator Extend
     """,
     'author': 'Jay Makavana',
     'category': 'Sales/Sales',
-    'depends': ['ak_odoo_cpq'],
+    'depends': ['ak_odoo_cpq', 'sale'],
     'data': [
         'views/product_template.xml',
+        'views/update_customer.xml',
     ],
     'assets': {
         'web.assets_backend': [
             'ak_cpq_extend/static/src/components/**/*',
+            'ak_cpq_extend/static/src/css/customer_style.scss',
         ],
     },
 }

@@ -1,0 +1,12 @@
+<templates xml:space="preserve">
+    <t t-name="ak_cpq_extend.update_customer">
+        <div class="update-customer-container">
+            <div class="customer-list">
+                <CustomerList onSelectCustomer="onSelectCustomer"/>
+            </div>
+            <div class="customer-form" t-if="state.selectedCustomer">
+                <CustomerForm customer="state.selectedCustomer"/>
+            </div>
+        </div>
+    </t>
+</templates>
